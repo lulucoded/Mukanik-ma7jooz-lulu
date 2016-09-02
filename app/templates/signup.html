@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
-
+{% csrf_token %}
 
 
 {% block content %}
 
-        <form action="/signup" method="POST">
+        <form action="/homepage" method="POST">
 
             {% crispy form %}
-            <input type="submit" value"Save">
+
         </form>
     
 {% endblock %}

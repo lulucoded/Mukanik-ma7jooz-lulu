@@ -7,9 +7,15 @@ from app.models import CustomUser, CustomUserManager
 from django.contrib.auth import authenticate, login, logout
 
 
-
-
 # Create your views here.
+
+def homepage(request):
+
+	context = {}
+
+	return render (request, 'base.html', context)
+
+
 def login_view(request):  
     context = {}
 
@@ -72,4 +78,3 @@ def logout_view(request):
     return redirect('/signup/')
 
 
-    

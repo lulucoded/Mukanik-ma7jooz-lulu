@@ -17,11 +17,11 @@ from app.models import CustomUser
 class CustomUserCreationForm(UserCreationForm):  
     def __init__(self, *args, **kwargs):
         super(CustomUserCreationForm, self).__init__(*args, **kwargs)
-        del self.fields['email']
+        # del self.fields['email']
 
     class Meta:
         model = CustomUser
-        fields = ("email", "password")
+        fields = ("email",)
 
 
 class CustomUserChangeForm(UserChangeForm):  
